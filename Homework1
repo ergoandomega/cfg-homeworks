@@ -19,7 +19,7 @@ class CashRegister:
 
     def __init__(self):
 
-        self.total_items = None # {'item': 'price'}
+        self.total_items = None  # {'item': 'price'}
         self.total_price = 0
         self.discount = 0
 
