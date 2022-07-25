@@ -13,38 +13,68 @@ For example, method add_item probably accepts some kind of an item?..
 3. You will need to write some examples of how your code works.
 
 """
-
+#Example codes for CashRegister.
 
 class CashRegister:
 
     def __init__(self):
-
-        self.total_items = None  # {'item': 'price'}
+        self.total_items = {}  # {'item': 'price'}
         self.total_price = 0
         self.discount = 0
 
-    def add_item(self):
-        pass
+    def add_item(self, item_and_price):
+        self.total_items.update(item_and_price)
 
-    def remove_item(self):
-        pass
+    def remove_item(self, item):
+        self.total_items.pop(item)
 
-    def apply_discount(self):
-        pass
+    def apply_discount(self, discount_amount):
+        self.discount += discount_amount
 
     def get_total(self):
-        pass
+        total_before_discount = sum(self.total_items.values())
+        return total_before_discount - self.discount
 
     def show_items(self):
-        pass
+        for item, price in self.total_items.items():
+            print(f" - {item} ... £{price:.2f}")
 
     def reset_register(self):
-        pass
+        self.total_items = {}
+        self.total_price = 0
+        self.discount = 0
 
 
-# EXAMPLE code run:
+# For our shop, it has 4 cash registers
+register_1 = CashRegister()
+register_2 = CashRegister()
+register_3 = CashRegister()
+register_4 = CashRegister()
 
-# ADD
+#Customer checking out items at cashregister 2 with cheese, grapes, wine, celery.
+register_2.add_item({'Cheese': 3.00})
+register_2.add_item({'Grapes': 2.00})
+register_2.add_item({'Wine': 6.50})
+register_2.add_item({'Celery': 1.50})
+
+#Customer changed their mind and don't want to buy celery.
+register_2.remove_item('Celery')
+
+#Customer used half price discount voucher for wine.
+register_2.apply_discount(3.25)
+
+#Customer ready to check out and need to show purchase total.
+print(register_2.get_total())
+
+#Customer want to see items checked on to the register.
+register_2.show_items()
+
+#Customer checked out and paid and need to get ready for next customer.
+register_2.reset_register()
+
+#To check reset register applied.
+print("...")
+register_2.show_items()
 
 
 """
@@ -71,7 +101,7 @@ class Student:
 
 
 # class CFGStudent(<should inherit from Student>)
-#     create new methods that manage student's subects (add/remove new subject and its graade to the dict)
+#     create new methods that manage student's subjects (add/remove new subject and its grade to the dict)
 #     create a method to view all subjects taken by a student
 #     create a method  (and a new variable) to get student's overall mark (use average)
 
