@@ -97,11 +97,29 @@ class Student:
         self.name = name
         self.age = age
         self.id = id
-        self.subjects = dict()
+        self.subjects = {subject: False for subject in subjects}
 
+    # class CFGStudent(<should inherit from Student>)
+    #     create new methods that manage student's subjects (add/remove new subject and its grade to the dict)
+    #     create a method to view all subjects taken by a student
+    #     create a method  (and a new variable) to get student's overall mark (use average)
 
-# class CFGStudent(<should inherit from Student>)
-#     create new methods that manage student's subjects (add/remove new subject and its grade to the dict)
-#     create a method to view all subjects taken by a student
-#     create a method  (and a new variable) to get student's overall mark (use average)
+    # To add subjects to student.
+    def add_subjects(self, subject):
+    self.subjects.update({subject: False})
 
+    # To remove student subject.
+    def remove_subject(self, subject)
+    self.subjects.remove(subject)
+
+    #To view all subjects
+    def_view_all_subjects(subject)
+    for subject in self.subjects.items():
+        print(f" Registered {subject}.")
+
+    #Adding grade as additional variable.
+    def add_subject_mark(grade)
+    pass
+
+    def view_average_subject_mark
+    pass
