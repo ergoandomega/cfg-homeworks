@@ -1,0 +1,30 @@
+import random
+import string
+
+def get_random_lower_string(length):
+    # choose from all lowercase letter
+    letters = string.ascii_lowercase
+    random_str = ''.join(random.choice(letters) for i in range(length))
+    print("Random string of length", length, "is:", random_str)
+
+get_random_lower_string(8)
+get_random_lower_string(6)
+get_random_lower_string(4)
+
+
+characters = "cbacba"
+phrase = "aabbccc"
+
+result_str = ''.join((random.choice("cbacba") for i in range(5)))
+print(result_str)
+
+
+
+def generate_phrase(characters, phrase):
+    letters = string.ascii_lowercase
+    random_str = ''.join(random.choice(letters) for i in range(length))
+    print("Random string of length", length, "is:", random_str)
+
+characters = string.ascii_letters + string.digits + string.punctuation
+phrase = ''.join(random.choice(characters) for i in range(8))
+print("Random phrase is:", phrase)
