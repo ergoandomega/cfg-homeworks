@@ -1,0 +1,74 @@
+(1) How does OOP (Object Oriented Programming) differ from POP (Procedural Oriented Programming)?
+OOP uses classes and objects and follows a bottom-up approach. While POP uses functions and is a top-down programming paradigm. 
+Inheritance is used in OOP and encapsulation is used to hide data, making it more secure in OOP. With POP the data is considered less secure as data hiding is not an option and adding new data and functions are not an easy task in POP. While adding expanding new data and functions are easy in OOP, it also provides a clear structure for programs and is faster and easier to execute. 
+
+Example: How would you achieve the same thing with two different approaches [How would you achieve the same output via the two programmes] 
+
+
+(2) What's polymorphism in OOP?
+When an object has the ability to take many forms in Python it is polymorphism in OOP. It let's us perfom the same action in many different ways and operators are an example of polymorpic functions, allows us to add, substract, divide and multiply different data types. 
+
+ Give an example of 2 types Overriding and overloading
+
+num1 = 4
+ num2 = 2 
+print(num1 + num2)
+ > Output = 6
+
+str1 = "Hello" 
+str2 = "World" 
+print(str1 + " " + str2) 
+> Output = "Hello World"
+The operator <+> has been used to carry out different operator operations for different data types.
+
+
+
+(3) What's inheritance in OOP?
+Subclass is a child class which inherits information from the parent class. The inheritance is when a class derives from another class. In OOP, the five forms of inheritance are; single inheritance, multiple inheritance, multi-level inheritance, hierarchical inheritance, and hybrid inheritance. 
+
+
+(4) If you had to make a program that could vote for the top three funniest people in the office, how would you do that? How would you make it possible to vote on those people?
+I will look into using the dictionary and counter function to create list of people in the office and for their names to be voted on. Convert this list of people names into dictionary by using counter iterator method. Set the names as key and count the frequency as value.
+Will then map candidates on the count value and find the value of maximum vote caster per candidate. Sort the list of candidates by number of maximum votes and print the top three values. 
+
+
+(5) What's the software development life cycle?
+The software development life cycle has four main phases, design a solution, write code, test code, debug, and keep repeating the phases until the program runs without any issues.
+During the design phase we working on a solution to solve the problem, determine the program structure, the algorithms and have a clear idea of what we are trying to achive.
+The next phase will be starting on the coding, take the output from design phase and turn this into working code, following the Python programming structure and create pure code.
+After the code is written up, the next phase is to test the code, we can test the code manuall but also use a tool for this phase. Within Python there are different tools we can use during this phase, the unitest module is a build-in Python library to test the code. 
+After testing, being able to debug the code is crucial, we can do this in several different ways. One ways is to use a Python debugger, this is a tool that allows us to step through our code line by line and to dectect any errors. Another way is to use Python console, this will allow us to type in the Python code and see the results immediately and great to test small code pices and see the output of the code.
+Another different way is to use Python logging module, this allows us to add logging statement to the code and tracks what the code does and detect any errors.
+The life cycle continues in a loop and is not completed until the code runs without any errors.
+
+
+
+(6) What's the difference between agile and waterfall?
+The testing phase starts at different stage, in agile the testing is performed concorrently with software development whereas in waterfall methodolgy the testing comes after the build phase. 
+The agile methodology is known for its flexibility whereas waterfall is a structured software development methodology. 
+Agile follows an incremental apporach and allows changes in project development requirement. The waterfall is a sequential design process and has no scope of changing the requirements once the project development starts. 
+
+
+(7) What is the reduced function used for?
+The reduce() function is used to apply a specific function passed in its argument to all of the list elements referred in the sequence passed along.  It can be used to calculate the summation of a list and it is defined in functools. The reduce() function stores the intermediate result and only returns the final summation value.
+
+
+(8) How does merge sort work?
+To merge two parts, we can use the merge() function and merge sort works by splitting the input list in two halves and further split, sorted, before merging the two sorted halves. The merging process takes a linear time everytime it is called. It works like divide and conquer category of algorithms, where the splits gets done over and over again until we gets it into two halves. Then we combine the pairs of one element into two element, sorting it in the process and merged further into next level up, sorted, until the end.
+
+
+(9) Generators - generator functions allow you to declare a function that behaves like an iterator, i.e. it can be used in a for loop. What is the use case?
+Generators are an easy way to create iterators and can be automatically handled in Python. It will return a function that returns an object/iterator to iterate over. 
+Generators will maintain its local state so the function can resume again exactly where it left off when called consequent times.
+Generators are functions that yields a consequent set of values from a yield statement rather than a return statement.
+Generators are good dealing with huge dataset and good at generate sequences in a memory-effient way.
+
+
+(10) Decorators - a page for useful (or potentially abusive?) decorator ideas. What is the return type of the decorator?
+We'll use a decorator to change the behavior of a function without modifying the function itself. Decorators allows us to modify the behaviour of function or class and can wrap another function in order to extend the behaviour of the wrapped function without permanently modifiying it. We can use a __call__ method of classes to create an object that acts as a function and then function decorator that returns an object that acts like a function. 
+Decorators can be impletement in two consepts, class decorators and function decorators.
+The class decorator can check parameters before executing the function preventing overlading and enable the function to store only logical and necessary statements.
+Can use decorators to print time to execute program that require time count. 
+We can also use decorators when there is a need to run the same code on multiple functions and this will avoid us having to duplicate the code.
+
+ 
